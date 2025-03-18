@@ -1,0 +1,317 @@
+/*
+---------------------------------------------------------------------------------------
+* Template Name             :                                                         *
+* Author                    :                                                         *
+* Version                   :                                                         *
+* Design and Developed by   :                                                         * 
+*--------------------------------------------------------------------------------------
+NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
+*/
+
+/*================================================
+[  Table of contents  ]
+==================================================
+    1). Typography
+    2). Helper Classes
+    3). Back to top 
+    4). header
+    5). banner
+    6). About us
+    7). Product
+    8). services
+    8). client
+    9). App Screenshots
+    10). client
+    11). contact
+    12). footer
+==================================================
+[ End table content ]
+================================================*/
+
+
+/*==================================================
+    1). Typography
+==================================================*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+body {font-family: 'Poppins', sans-serif; color: #373a5b; animation: pageAnimation ease 2s; animation-iteration-count: 1; animation-fill-mode: forwards;}
+@keyframes pageAnimation {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+*, *::after, *::before {/*-webkit-user-select: none;*/ -webkit-app-region: no-drag; -webkit-user-drag: none; /*cursor: default;*/ }
+a {outline: medium none !important; color: #f58121; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; } 
+a:focus {color: #291843; text-decoration: none !important; }
+a:hover {color: #291843; text-decoration: none !important; }
+input {outline: medium none !important; color: #f58121; }
+button:focus {outline: 0px dotted; outline: 0px auto -webkit-focus-ring-color; }
+
+
+/*==================================================
+    2). Helper Classes
+==================================================*/
+/* Color */
+.text-primary {color: #f58121 !important; }
+.text-white {color: #ffffff; }
+.text-dark {color: #291843 !important; }
+.text-light {color: #626262 !important; }
+.text-light-gray {color: #cccccc !important; }
+.text-muted {color: #999999 !important; }
+.text-body {color: #626262 !important; }
+
+/* Background */
+.bg-primary {background-color: #f5f7fa !important; }
+.bg-dark {background-color: #291843 !important; }
+.bg-gray {background-color: #707173 !important; }
+
+/* Border */
+.border-primary {border-color: #f58121 !important; }
+.border-dark {border-color: #291843 !important; }
+.border-gray {border-color: #707173 !important; }
+
+section {padding-top: 100px !important; }
+
+/*==================================================
+    3). Back to top 
+==================================================*/
+.back-to-top {position: fixed; bottom: 15px; right: 15px; width: 40px; height: 40px; color: #ffffff; font-size: 24px; text-transform: uppercase; line-height: 40px; border-radius: 50px; text-align: center; z-index: 100; cursor: pointer; background: #0a0a0a; display: none; -webkit-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; -moz-transition: all 300ms ease; transition: all 300ms ease; animation: BounceAnimation 4s infinite; -webkit-animation: BounceAnimation 4s infinite; -moz-animation: BounceAnimation 4s infinite; -o-animation: BounceAnimation 4s infinite;}
+.back-to-top:hover {box-shadow: 0px 0px 45px rgba(0,0,0,0.5); }
+.back-to-top a {color: #fff;}
+.back-to-top.show {display: inline-block;}
+
+/*==================================================
+    4). header
+==================================================*/
+.navbar-expand-lg {width: 100%; float: left;}
+.header-area {background: #fff;-webkit-box-shadow: 0px -12px 25px 0px rgba(0,0,0,0.75); -moz-box-shadow: 0px -12px 25px 0px rgba(0,0,0,0.75); box-shadow: 0px -12px 25px 0px rgba(0,0,0,0.75); }
+.navbar-expand-lg {padding: 0px 0; transition: ease all 0.5s;}
+.navbar-brand img {width: 230px; transition: ease all 0.5s; }
+#navbarSupportedContent {justify-content: flex-end; }
+.navbar-dark .navbar-nav .nav-link {color: #002529 !important; position: relative; font-weight: normal; padding: 5px 12px; margin: 0 2px; }
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {color:#f58121 !important; }
+
+
+/*Mobile toggle start*/
+.navbar-toggler {color: rgba(255,255,255,.5); border-color: rgb(221, 52, 110); position: relative; height: 35px; width: 45px; }
+.navbar-toggler-icon {background: #002225; height: 2px; position: absolute; left: 0; right: 0; margin: auto; width: 50%; }
+.navbar-toggler-icon:after {content: ""; position: absolute; height: 2px; width: 100%; background: #002225; left: 0; right: 0; margin: 0 auto; top: 8px; }
+.navbar-toggler-icon:before {content: ""; position: absolute; height: 2px; width: 100%; background: #002225; left: 0; right: 0; margin: 0 auto; bottom: 8px; }
+.navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{background:transparent;}
+.navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {bottom: 2px; transform: rotate(47deg);}
+.navbar-dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {top: -2px; transform: rotate(-47deg);}
+/*Mobile toggle end*/ 
+
+/*==================================================
+    5). banner
+==================================================*/
+section.section-banner {padding-bottom: 40px !important; }
+.mouse_down {position: absolute; left: 0; right: 0; bottom: 50px; z-index: 1; margin: 0 auto; text-align: center; display: inline-block; width: 50px; animation: BounceAnimation 4s infinite; -webkit-animation: BounceAnimation 4s infinite; -moz-animation: BounceAnimation 4s infinite; -o-animation: BounceAnimation 4s infinite;}
+@-webkit-keyframes BounceAnimation {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0); }
+    40% {-webkit-transform: translateY(-20px); }
+    60% {-webkit-transform: translateY(-10px); }
+}
+
+@-moz-keyframes BounceAnimation {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0); }
+    40% {-moz-transform: translateY(-20px); }
+    60% {-moz-transform: translateY(-10px); }
+}
+
+@keyframes BounceAnimation {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0); }
+    40% {transform: translateY(-20px); }
+    60% {transform: translateY(-10px); } 
+}
+.banner-image{position: relative;}
+/*.banner-image:after {content: ""; width: 100%; height: 100%; position: absolute; background: url(../images/banner/banner_bg.png) no-repeat; background-position: center bottom; left: 0; right: 0; background-size: 100%;bottom: -1px;}*/
+.banner-text {position: absolute; top: 120px; left: 5%; color: #f58121; z-index: 9; }
+.welcome{font-size: 38px; font-weight: normal;margin: 0;}
+.welcome-name{font-size: 70px; font-weight: bold;margin: 0;}
+.welcome-sub{font-size: 40px; font-weight: bold;margin: 0;}
+
+
+.banner-content {position: absolute; z-index: 99999; top: 25%; width: 100%; }
+.main-banner .owl-nav .owl-prev {position: absolute; left: 15px; top: 50%; opacity: 1; -webkit-transition: all 0.4s ease-out; transition: all 0.4s ease-out; background: rgba(0, 0, 0, 0.5) !important; width: 40px; cursor: pointer; height: 40px; position: absolute; display: block; z-index: 1000; border-radius: 0; }
+.main-banner .owl-nav .owl-prev span {font-size: 1.6875rem; color: #fff; }
+.main-banner .owl-nav .owl-prev:focus {outline: 0; }
+.main-banner .owl-nav .owl-prev:hover {background: #000 !important; }
+
+.main-banner .owl-nav .owl-next {position: absolute; right: 15px; top: 50%; opacity: 1; -webkit-transition: all 0.4s ease-out; transition: all 0.4s ease-out; background: rgba(0, 0, 0, 0.5) !important; width: 40px; cursor: pointer; height: 40px; position: absolute; display: block; z-index: 1000; border-radius: 0; }
+.main-banner .owl-nav .owl-next span {font-size: 1.6875rem; color: #fff; }
+.main-banner .owl-nav .owl-next:focus {outline: 0; }
+.main-banner .owl-nav .owl-next:hover {background: #000 !important; }
+
+
+
+/*==================================================
+    6). About us
+==================================================*/
+
+.box-top-title {margin-left: 10px; }
+.text-title{position: relative; font-size: 24px; color: #373a5b; z-index: 1; font-weight: bold}
+.text-title:before {position: absolute; content: ''; left: -10px; top: -7px; width: 45px; height: 45px; z-index: -1; border-radius: 50px; display: inline-block; background-image: -ms-linear-gradient(left, #0084fd 0%, #6cd8ff 100%); background-image: -moz-linear-gradient(left, #0084fd 0%, #6cd8ff 100%); background-image: -o-linear-gradient(left, #0084fd 0%, #6cd8ff 100%); background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #002124), color-stop(100, #0b535a)); background-image: -webkit-linear-gradient(left, #002124 0%, #0b535a 100%); background-image: linear-gradient(to right, #002124 0%, #0b535a 100%); }
+.text-title span{color: #fff;}
+.page-title {font-size: 34px; font-weight: 700; }
+.box-card {position: relative; text-align: center; padding: 40px 30px; background-color: #ffffff; border-radius: 7px; box-shadow: 0px 0px 45px rgba(0,0,0,0.20); margin-bottom: 40px;}
+.box-about {margin: 0 50px; }
+.about-icon {position: relative; width: 100px; height: 100px; overflow: hidden; border-radius: 50px; text-align: center; margin: 0 auto; }
+.icon01{background: #f64b4e;}
+.icon02{background: #0084fe;}
+.icon03{background: #2abb52;}
+.icon04{background: #9424d7;}
+.about-icon:after {position: absolute; content: ''; left: 100%; top: 0px; width: 100%; height: 100%; border-radius: 50px; -webkit-transition: all 600ms ease; -ms-transition: all 600ms ease; -o-transition: all 600ms ease; -moz-transition: all 600ms ease; transition: all 600ms ease; background: url("../images/about/icon-pattern.png") right top no-repeat; }
+.box-about .box-card:hover .about-icon:after {left: 0px; transition-delay: 300ms;}
+.about-icon img {width: 60px; text-align: center; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }
+.about-icon-name{margin-top: 25px;}
+
+ 
+
+/*==================================================
+    7). Product
+==================================================*/
+.section-product{position: relative;}
+.section-product:after {position: absolute; content: ''; left: 00px; bottom: 0; width: 100%; height: 100%; -webkit-transition: all 600ms ease; -ms-transition: all 600ms ease; -o-transition: all 600ms ease; -moz-transition: all 600ms ease; transition: all 600ms ease; background: url(../images/product/background_01.png) no-repeat; background-attachment: fixed; background-position: left center; }
+.section-product:before {position: absolute; content: ''; right: 00px; bottom: 0; width: 100%; height: 100%; -webkit-transition: all 600ms ease; -ms-transition: all 600ms ease; -o-transition: all 600ms ease; -moz-transition: all 600ms ease; transition: all 600ms ease; background: url(../images/product/background_02.png) no-repeat; background-attachment: fixed; background-position: right center; }
+.circle-product:before{background: #f58121;background: -moz-linear-gradient(left, #f54346 0%, #f66265 100%);background: -webkit-linear-gradient(left, #f54346 0%,#f66265 100%);background: linear-gradient(to right, #f54346 0%,#f66265 100%);}
+.box-product-image {position: relative; display: inline-block; min-height: 450px; width: 100%; }
+.box-product-image img { width: 100%;}
+.product01 {position: relative; right: 0; float: right; }
+.product02 {transform: translate(-60px, 140px); position: absolute;}
+.box-product-text {padding: 0 50px; }
+.product-title{color: #f58121}
+
+/*-- CIRCLE ANIMATION CSS --*/
+.circles {position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
+.circles li {position: absolute; display: block; list-style: none; width: 20px; height: 20px; border-radius: 20px !important; background: rgba(55, 58, 91, 0.1); animation: animatecircle 25s linear infinite; bottom: -120px; }
+.circles li:nth-child(1) {left: 25%; width: 80px; height: 80px; border-radius: 80px !important; animation-delay: 0s; }
+.circles li:nth-child(2) {left: 10%; width: 20px; height: 20px; border-radius: 20px !important; animation-delay: 2s; animation-duration: 8s; }
+.circles li:nth-child(3) {left: 70%; width: 20px; height: 20px; border-radius: 20px !important; animation-delay: 4s; }
+.circles li:nth-child(4) {left: 40%; width: 60px; height: 60px; border-radius: 60px !important; animation-delay: 0s; animation-duration: 8s; }
+.circles li:nth-child(5) {left: 70%; width: 20px; height: 20px; border-radius: 20px !important; animation-delay: 0s; }
+.circles li:nth-child(6) {left: 85%; width: 100px; height: 100px; border-radius: 100px !important; animation-delay: 0s; }
+@keyframes animatecircle {
+    0% {transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% {transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+}
+
+
+/*==================================================
+    8). services
+==================================================*/
+.circle-services:before{background: #9426d5;background: -moz-linear-gradient(left, #9426d5 0%, #f66265 100%);background: -webkit-linear-gradient(left, #9426d5 0%,#f66265 100%);background: linear-gradient(to right, #9426d5 0%,#f66265 100%);} 
+.box-services:hover .about-icon:after {left: 0px; transition-delay: 300ms;}
+.box-services {background-color: #ffffff; border-radius: 7px; padding: 20px; box-shadow: 0px 0px 45px rgba(0,0,0,0.20); margin-bottom: 30px; min-height: 500px; display: inline-block; width: 100%;}
+.Collection, .gis, .Development{min-height: 413px;}
+.services-text h4 {font-size: 24px; font-weight: 600; }
+.services-text p {font-size: 14px; font-weight: 600; }
+.Aerial:hover{background: url(../images/services/bg_services_01.png) no-repeat; background-size: cover; background-position: center; color: #fff; }
+.Collection:hover{background: url(../images/services/bg_services_02.png) no-repeat; background-size: cover; background-position: center; color: #fff; }
+.Mobile:hover{background: url(../images/services/bg_services_03.png) no-repeat; background-size: cover; background-position: center; color: #fff; }
+.gis:hover{background: url(../images/services/bg_services_04.png) no-repeat; background-size: cover; background-position: center; color: #fff; }
+.Survey:hover{background: url(../images/services/bg_services_05.png) no-repeat; background-size: cover; background-position: center; color: #fff; }
+.Development:hover{background: url(../images/services/bg_services_06.png) no-repeat; background-size: cover; background-position: center; color: #fff; }
+
+
+/*==================================================
+    9). App Screenshots
+==================================================*/
+.section-Screenshots {padding-bottom: 150px !important; background: url(../images/map.png) no-repeat; background-attachment: fixed; background-position: center; }
+.circle-app-Screenshots:before{background: #2abb52;background: -moz-linear-gradient(left, #2abb52 0%, #58f082 100%);background: -webkit-linear-gradient(left, #2abb52 0%,#58f082 100%);background: linear-gradient(to right, #2abb52 0%,#58f082 100%);} 
+.mobile-fream{position: absolute; right: 0; left: 0; margin: auto; text-align: center; z-index: 9;}
+.mobile-fream .slick-slider { margin: auto; }
+
+.app-Screenshots .slick-list {padding: 0px 0 00 0; }
+.app-Screenshots .slick-slide img {display: inline-block; border-radius: 48px; width: 230px; height: 250px; position: relative;}
+.app-Screenshots button.slick-prev,
+.app-Screenshots button.slick-next{font-size: 0px; color: #373a5b; width: 50px; height: 50px; line-height: 55px; text-align: center; border-radius: 50px; font-weight: 700; background-image: none; display: inline-block; margin: 0px 15px 0px 15px;-webkit-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; -moz-transition: all 300ms ease; transition: all 300ms ease; position: absolute; top: 45%; border: none;background: #e7ecf2;z-index: 99;}
+.app-Screenshots button.slick-prev {left: -40px; }
+.app-Screenshots button.slick-next {right: -40px; }
+.app-Screenshots button.slick-next:hover:after,.app-Screenshots button.slick-prev:hover:after{background: #f58121; color: #fff;}
+.app-Screenshots button.slick-prev:after, .app-Screenshots button.slick-next:after {content: ""; position: absolute; content: "\f054"; width: 50px; font-family: FontAwesome; height: 50px; font-size: 18px; left: 0; right: 0; margin: auto;     border-radius: 50px;}
+.app-Screenshots button.slick-prev:after{transform: rotate(180deg); left: -6px;}
+
+
+/*==================================================
+    10). client
+==================================================*/
+.circle-client:before{background: #6cd8ff;background: -moz-linear-gradient(left, #6cd8ff 0%, #8dd4ee 100%);background: -webkit-linear-gradient(left, #6cd8ff 0%,#8dd4ee 100%);background: linear-gradient(to right, #6cd8ff 0%,#8dd4ee 100%);    left: -3px;}
+.box-clients-logo {border: 1px solid #f4f4f4; border-radius: 5px; margin-bottom: 30px;}
+.box-clients-logo img{-webkit-filter: grayscale(100%); -webkit-filter: grayscale(1); filter: grayscale(100%);}
+.box-clients-logo:hover img{-webkit-filter: grayscale(0%); -webkit-filter: grayscale(0); filter: grayscale(0%);}
+
+
+/*==================================================
+    11). contact
+==================================================*/
+.circle-Contact:before{background: #e642dc;background: -moz-linear-gradient(left, #e642dc 0%, #f488ed 100%);background: -webkit-linear-gradient(left, #e642dc 0%,#f488ed 100%);background: linear-gradient(to right, #e642dc 0%,#f488ed 100%);} 
+
+.box-contact {position: relative; padding: 20px 40px; background-color: #ffffff; border-radius: 7px; box-shadow: 0px 0px 45px rgba(0,0,0,0.20); margin-bottom: 30px; min-height: 253px;}
+.location-icon img {width: 80px; margin-bottom: 20px; }
+.contact-title {font-size: 24px; font-weight: bold; }
+.contact-data {margin: 0; }
+.contactdata {position: absolute; z-index: 1; margin: 0 auto; text-align: center; left: 0; right: 0; }
+.box-contact-map { margin-top: 200px; position: relative; top: 10px;}
+
+
+/*==================================================
+    12). footer
+==================================================*/
+.section-footer{background: #002226;}
+
+
+
+@media screen and (max-width: 1600px){
+    .box-services {min-height: 560px;}
+    .Collection, .gis, .Development {min-height: 475px; }
+}
+
+@media screen and (max-width: 1199px){
+    .banner-text {top: 70px;}
+}
+@media screen and (max-width: 991px){
+    .mouse_down{bottom: 0;}
+    .mouse_down img {width: 15px; }
+    .welcome, .welcome-sub{font-size: 22px; }
+    .welcome-name{font-size: 42px; }
+
+    .box-about {margin: 20px 0 0 0; }
+    .box-product-image {min-height: auto; }
+    .product02{display: none;}
+    .box-product-text {padding: 0 00px; }
+
+    .section-banner {margin-top: 70px; }
+    .banner-area {position: relative; }
+    #navbarSupportedContent {position: absolute; top: 74px; background: #ffff; width: 100%; }
+
+    .product01 {float: none; margin: 0 0 20px 0; }
+    .box-title {margin-bottom: 25px; }
+
+}
+@media screen and (max-width: 767px){
+    .location-icon img {width: 50px; }
+    .contactdata {position: relative; }
+    .box-contact-map {margin-top: 0; } 
+    .box-contact {min-height: auto; }
+    .app-Screenshots button.slick-prev {left: 0px; }
+    .app-Screenshots button.slick-next {right: 00px; }
+    .main-banner .owl-nav .owl-prev, .main-banner .owl-nav .owl-next{width: 22px; top: 40%}
+    .section-product:after{display: none;}
+    
+
+}
+
+@media screen and (max-width: 568px){
+    .banner-text {top: 70px;}
+    .welcome, .welcome-sub{font-size: 14px; }
+    .welcome-name{font-size: 22px; align-content: center; }
+    
+    .app-Screenshots button.slick-next {right: 70px; } 
+    .app-Screenshots button.slick-prev {left: 70px; }
+    .app-Screenshots button.slick-prev, .app-Screenshots button.slick-next {top: inherit; bottom: -80px; }
+
+    .app-Screenshots {margin-bottom: 100px; }
+}
+
+
+
